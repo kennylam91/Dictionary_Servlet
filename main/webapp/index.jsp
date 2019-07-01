@@ -4,6 +4,10 @@
     <title>$Title$</title>
   </head>
   <body>
-  Hello World!
+<h1>Vietnamese Dictionary:</h1>
+<form action="/search" method="post">
+  <input type="text" name="searchWord">
+  <input type="submit" value="Search">
+</form>
   </body>
 </html>
