@@ -9,21 +9,22 @@ import java.util.Map;
 import java.util.PrimitiveIterator;
 
 public class DictionaryServlet extends HttpServlet {
-    private static Map<String,String> dictionary= new HashMap<>();
-    static{
-        dictionary.put("hello","xin chao");
-        dictionary.put("good morning","chao buoi sang");
-        dictionary.put("good afternoon","chao buoi trua");
+    private static Map<String, String> dictionary = new HashMap<>();
+
+    static {
+        dictionary.put("hello", "xin chao");
+        dictionary.put("good morning", "chao buoi sang");
+        dictionary.put("good afternoon", "chao buoi trua");
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
         PrintWriter writer = response.getWriter();
-        String searchWord= request.getParameter("searchWord");
-        String result= dictionary.get(searchWord);
+        String searchWord = request.getParameter("searchWord");
+        String result = dictionary.get(searchWord);
         writer.println("<html>");
         writer.println(result);
-
         writer.println("</html>");
 
     }
